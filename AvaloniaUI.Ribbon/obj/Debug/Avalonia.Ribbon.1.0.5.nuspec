@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Avalonia.Ribbon</id>
+    <version>1.0.5</version>
+    <authors>Alban Mazerolles, Rubal Walia, Splitwirez</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/waliarubal/AvaloniaRibbon</projectUrl>
+    <description>Package Description</description>
+    <repository type="Git" url="https://github.com/waliarubal/AvaloniaRibbon.git" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Avalonia" version="0.9.10" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.Desktop" version="0.9.10" exclude="Build,Analyzers" />
+        <dependency id="Avalonia.ReactiveUI" version="0.9.10" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\bin\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.dll" target="lib\netcoreapp3.1\AvaloniaUI.Ribbon.dll" />
+  </files>
+</package>
