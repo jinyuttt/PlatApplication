@@ -579,9 +579,16 @@
 		
 		</ribbon:Ribbon>
 		
-		<ItemsControl  DockPanel.Dock="Bottom" ></ItemsControl>
+		<ItemsControl Height="20"  DockPanel.Dock="Bottom" Background="Green" >
+			<DockPanel>
+				 <Button Content="版本" DockPanel.Dock="Right"></Button>
+				  <TextBlock>|</TextBlock>
+		         <TextBlock Text="admin" DockPanel.Dock="Right"></TextBlock>
+			     <TextBlock Text="v1.0.0" DockPanel.Dock="Right"></TextBlock>
+			</DockPanel>
+		</ItemsControl>
 
-		<views:MainView/>
+		<views:MainView  Background="SkyBlue"/>
 	</DockPanel>
 
 </ribbon:RibbonWindow>
