@@ -8,12 +8,6 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Remove="Assets\RibbonIcons\corner.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Assets\RibbonIcons\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.9.12" />
     <PackageReference Include="Avalonia.Desktop" Version="0.9.12" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.12" />
@@ -25,15 +19,13 @@
     <PackageReference Include="Dock.Model.ReactiveUI" Version="0.9.12" />
     <PackageReference Include="ReactiveUI" Version="10.3.6" />
   </ItemGroup>
-  <ItemGroup>
-    <None Update="Views\Documents\FileView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Views\Tools\FindView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Views\Tools\ReplaceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Update="**\*.xaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+			<SubType>Code</SubType>
+		</Compile>
+		<AvaloniaResource Include="**\*.xaml">
+			<SubType>Designer</SubType>
+		</AvaloniaResource>
+	</ItemGroup>
 </Project>
