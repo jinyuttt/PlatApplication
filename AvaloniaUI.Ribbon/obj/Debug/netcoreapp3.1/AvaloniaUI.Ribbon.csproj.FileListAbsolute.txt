@@ -1,7 +1,0 @@
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\bin\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.deps.json
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\bin\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.dll
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\bin\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.pdb
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\obj\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.csproj.CoreCompileInputs.cache
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\obj\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.dll
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\obj\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.pdb
-E:\study\Ribbon\AvaloniaRibbon\AvaloniaUI.Ribbon\obj\Debug\netcoreapp3.1\AvaloniaUI.Ribbon.csprojAssemblyReference.cache

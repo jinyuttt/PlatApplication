@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Remove="Assets\RibbonIcons\corner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\RibbonIcons\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.12" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.12" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.12" />
+    <PackageReference Include="AvaloniaUIRibbon" Version="1.0.5-beta" />
+    <PackageReference Include="Dock.Avalonia" Version="0.9.12" />
+    <PackageReference Include="Dock.Avalonia.Themes.Default" Version="0.9.12" />
+    <PackageReference Include="Dock.Avalonia.Themes.Metro" Version="0.9.12" />
+    <PackageReference Include="Dock.Model" Version="0.9.12" />
+    <PackageReference Include="Dock.Model.ReactiveUI" Version="0.9.12" />
+    <PackageReference Include="ReactiveUI" Version="10.3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Views\Documents\FileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\Tools\FindView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\Tools\ReplaceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>
