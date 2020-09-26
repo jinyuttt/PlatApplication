@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\study\\PlatApplication\\Notepad\\Notepad.csproj": {}
+  },
+  "projects": {
+    "E:\\study\\PlatApplication\\Notepad\\Notepad.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\study\\PlatApplication\\Notepad\\Notepad.csproj",
+        "projectName": "Notepad",
+        "projectPath": "E:\\study\\PlatApplication\\Notepad\\Notepad.csproj",
+        "packagesPath": "C:\\Users\\jinyu\\.nuget\\packages\\",
+        "outputPath": "E:\\study\\PlatApplication\\Notepad\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jinyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "d:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Avalonia.Angle.Windows.Natives": {
+              "target": "Package",
+              "version": "[2.1.0.2019013001, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Avalonia.Diagnostics": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Dock.Avalonia": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Dock.Avalonia.Themes.Default": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Dock.Avalonia.Themes.Metro": {
+              "target": "Package",
+              "version": "[0.10.0-preview4, )"
+            },
+            "Dock.Model": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Dock.Model.ReactiveUI": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Dock.Serializer": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0-preview.8.20407.11, )"
+            },
+            "ReactiveUI": {
+              "target": "Package",
+              "version": "[11.5.35, )"
+            },
+            "SourceLink.Create.CommandLine": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

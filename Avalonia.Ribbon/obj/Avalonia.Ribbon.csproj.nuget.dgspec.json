@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\study\\PlatApplication\\Avalonia.Ribbon\\Avalonia.Ribbon.csproj": {}
+  },
+  "projects": {
+    "E:\\study\\PlatApplication\\Avalonia.Ribbon\\Avalonia.Ribbon.csproj": {
+      "version": "1.1.2-build100120-02",
+      "restore": {
+        "projectUniqueName": "E:\\study\\PlatApplication\\Avalonia.Ribbon\\Avalonia.Ribbon.csproj",
+        "projectName": "AvaloniaRibbon",
+        "projectPath": "E:\\study\\PlatApplication\\Avalonia.Ribbon\\Avalonia.Ribbon.csproj",
+        "packagesPath": "C:\\Users\\jinyu\\.nuget\\packages\\",
+        "outputPath": "E:\\study\\PlatApplication\\Avalonia.Ribbon\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jinyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "d:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[0.10.0-preview5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

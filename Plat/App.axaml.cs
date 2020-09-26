@@ -4,7 +4,6 @@ using Avalonia.Markup.Xaml;
 using Dock.Model;
 using PlatForm.ViewModels;
 using PlatForm.Views;
-using System.IO;
 
 namespace PlatForm
 {

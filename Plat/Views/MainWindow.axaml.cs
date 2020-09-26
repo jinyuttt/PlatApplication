@@ -1,7 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Ribbon;
 using Avalonia.Markup.Xaml;
-using AvaloniaUI.Ribbon;
+
 
 namespace PlatForm.Views
 {
@@ -11,7 +12,7 @@ namespace PlatForm.Views
         {
             InitializeComponent();
 #if DEBUG
-            this.AttachDevTools();
+            //this.AttachDevTools();
 #endif
         }
 

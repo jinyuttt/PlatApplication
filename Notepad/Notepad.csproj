@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>00dd66f1-1403-46bc-aef3-c59f6e4a174b</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App.xaml" />
+    <None Remove="Views\Documents\FileView.xaml" />
+    <None Remove="Views\MainView.xaml" />
+    <None Remove="Views\MainWindow.xaml" />
+    <None Remove="Views\MenuView.xaml" />
+    <None Remove="Views\Tools\FindView.xaml" />
+    <None Remove="Views\Tools\ReplaceView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaXaml Include="App.xaml" />
+    <AvaloniaXaml Include="Views\Documents\FileView.xaml" />
+    <AvaloniaXaml Include="Views\MainView.xaml" />
+    <AvaloniaXaml Include="Views\MainWindow.xaml" />
+    <AvaloniaXaml Include="Views\MenuView.xaml" />
+    <AvaloniaXaml Include="Views\Tools\FindView.xaml" />
+    <AvaloniaXaml Include="Views\Tools\ReplaceView.xaml" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.Angle.Windows.Natives" Version="2.1.0.2019013001" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Avalonia" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Avalonia.Themes.Default" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Avalonia.Themes.Metro" Version="0.10.0-preview4" />
+    <PackageReference Include="Dock.Model" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Model.ReactiveUI" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Serializer" Version="0.10.0-preview5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0-preview.8.20407.11" />
+    <PackageReference Include="ReactiveUI" Version="11.5.35" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+</Project>

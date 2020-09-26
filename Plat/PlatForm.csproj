@@ -8,16 +8,15 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.9.12" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.9.12" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.12" />
-    <PackageReference Include="AvaloniaUIRibbon" Version="1.0.5-beta" />
-    <PackageReference Include="Dock.Avalonia" Version="0.9.12" />
-    <PackageReference Include="Dock.Avalonia.Themes.Default" Version="0.9.12" />
-    <PackageReference Include="Dock.Avalonia.Themes.Metro" Version="0.9.12" />
-    <PackageReference Include="Dock.Model" Version="0.9.12" />
-    <PackageReference Include="Dock.Model.ReactiveUI" Version="0.9.12" />
-    <PackageReference Include="ReactiveUI" Version="10.3.6" />
+    <PackageReference Include="Avalonia" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Avalonia" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Avalonia.Themes.Default" Version="0.10.0-preview5" />
+    <PackageReference Include="Dock.Avalonia.Themes.Metro" Version="0.10.0-preview4" />
+    <PackageReference Include="Dock.Model.ReactiveUI" Version="0.10.0-preview5" />
+    <PackageReference Include="ReactiveUI" Version="11.5.35" />
   </ItemGroup>
 	<ItemGroup>
 		<Compile Update="**\*.xaml.cs">
@@ -27,5 +26,8 @@
 		<AvaloniaResource Include="**\*.xaml">
 			<SubType>Designer</SubType>
 		</AvaloniaResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Avalonia.Ribbon\Avalonia.Ribbon.csproj" />
 	</ItemGroup>
 </Project>

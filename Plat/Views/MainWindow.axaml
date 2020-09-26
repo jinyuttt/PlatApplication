@@ -1,94 +1,38 @@
 ﻿<ribbon:RibbonWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	   xmlns:id="clr-namespace:Dock.Avalonia;assembly=Dock.Avalonia"
         xmlns:vm="clr-namespace:PlatForm.ViewModels;assembly=PlatForm"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PlatForm.Views.MainWindow"
 	    xmlns:views="clr-namespace:PlatForm.Views;assembly=PlatForm"
-		xmlns:ribbon="clr-namespace:AvaloniaUI.Ribbon;assembly=AvaloniaUI.Ribbon"
+		xmlns:ribbon="clr-namespace:Avalonia.Controls.Ribbon;assembly=Avalonia.Controls.Ribbon"
         Icon="/Assets/avalonia-logo.ico"
-	    xmlns:id="clr-namespace:Dock.Avalonia;assembly=Dock.Avalonia"
 		 HasSystemDecorations="false" BorderBrush="#2b579a" TitleBarBackground="#2b579a" TitleBarForeground="#ffffff"
 		id:DockProperties.IsDragEnabled="True" id:DockProperties.IsDropEnabled="True"
         Title="PlatForm">
-	<ribbon:RibbonWindow.Styles>
-		<Style Selector="ribbon|RibbonGroupBox">
-			<Setter Property="Command" Value="{Binding OnClickCommand}"/>
-			<Setter Property="CommandParameter" Value="{Binding Path=Header, RelativeSource={RelativeSource Mode=Self}}"/>
-		</Style>
-		<Style Selector="ribbon|RibbonButton,ribbon|RibbonToggleButton">
-			<!--,ribbon|RibbonSplitButton-->
-			<Setter Property="Command" Value="{Binding OnClickCommand}"/>
-			<Setter Property="CommandParameter" Value="{Binding Path=Content, RelativeSource={RelativeSource Mode=Self}}"/>
-		</Style>
-		<Style Selector="ribbon|RibbonButton[Size=Small],ribbon|RibbonToggleButton[Size=Small]">
-			<!--,ribbon|RibbonSplitButton[Size=Small]-->
-			<Setter Property="CommandParameter" Value="{Binding Path=(ToolTip.Tip), RelativeSource={RelativeSource Mode=Self}}"/>
-		</Style>
-		<Style Selector="ribbon|RibbonSplitButton">
-			<Setter Property="Command" Value="{Binding OnClickCommand}"/>
-			<Setter Property="CommandParameter" Value="{Binding Path=Content, RelativeSource={RelativeSource Mode=Self}}"/>
-		</Style>
-		<Style Selector="ribbon|RibbonSplitButton[Size=Small]">
-			<Setter Property="CommandParameter" Value="{Binding Path=(ToolTip.Tip), RelativeSource={RelativeSource Mode=Self}}"/>
-		</Style>
-	</ribbon:RibbonWindow.Styles>
-
+	
 	<DockPanel>
 		<ribbon:Ribbon Name="RibbonControl" DockPanel.Dock="Top" Orientation="Horizontal" HelpButtonCommand="{Binding HelpCommand}">
 			<ribbon:Ribbon.Menu>
-				<ribbon:RibbonMenu RightColumnHeader="Recent stuff" ribbon:KeyTip.KeyTipKeys="F">
-					<ribbon:RibbonMenuItem Header="Item 1">
-						<ribbon:RibbonMenuItem.Icon>
-							<Rectangle Width="32" Height="32" Fill="Red"/>
-						</ribbon:RibbonMenuItem.Icon>
-						<ribbon:RibbonMenuItem Header="Orange red">
-							<ribbon:RibbonMenuItem.Icon>
-								<Rectangle Width="32" Height="32" Fill="OrangeRed"/>
-							</ribbon:RibbonMenuItem.Icon>
-						</ribbon:RibbonMenuItem>
-						<ribbon:RibbonMenuItem Header="Orange">
-							<ribbon:RibbonMenuItem.Icon>
-								<Rectangle Width="32" Height="32" Fill="Orange"/>
-							</ribbon:RibbonMenuItem.Icon>
-						</ribbon:RibbonMenuItem>
-						<ribbon:RibbonMenuItem Header="Yellow">
-							<ribbon:RibbonMenuItem.Icon>
-								<Rectangle Width="32" Height="32" Fill="Yellow"/>
-							</ribbon:RibbonMenuItem.Icon>
-						</ribbon:RibbonMenuItem>
-					</ribbon:RibbonMenuItem>
-					<ribbon:RibbonMenuItem Header="Item 2">
-						<ribbon:RibbonMenuItem.Icon>
-							<Rectangle Width="32" Height="32" Fill="Green"/>
-						</ribbon:RibbonMenuItem.Icon>
-						<ribbon:RibbonMenuItem Header="Cyan">
-							<ribbon:RibbonMenuItem.Icon>
-								<Rectangle Width="32" Height="32" Fill="Cyan"/>
-							</ribbon:RibbonMenuItem.Icon>
-						</ribbon:RibbonMenuItem>
-						<ribbon:RibbonMenuItem Header="Green yellow">
-							<ribbon:RibbonMenuItem.Icon>
-								<Rectangle Width="32" Height="32" Fill="GreenYellow"/>
-							</ribbon:RibbonMenuItem.Icon>
-						</ribbon:RibbonMenuItem>
-					</ribbon:RibbonMenuItem>
-					<!--ribbon:RibbonMenu.MenuPlacesItems>
-                        <ListBoxItem Content="Place 1"/>
-                        <ListBoxItem Content="Place 2"/>
-                        <ListBoxItem Content="Place 3"/>
-                    </ribbon:RibbonMenu.MenuPlacesItems-->
-					<ribbon:RibbonMenuItem Header="Purple">
-						<ribbon:RibbonMenuItem.Icon>
-							<Rectangle Width="32" Height="32" Fill="Purple"/>
-						</ribbon:RibbonMenuItem.Icon>
-					</ribbon:RibbonMenuItem>
-					<ribbon:RibbonMenuItem Header="Brown">
-						<ribbon:RibbonMenuItem.Icon>
-							<Rectangle Width="32" Height="32" Fill="Brown"/>
-						</ribbon:RibbonMenuItem.Icon>
-					</ribbon:RibbonMenuItem>
+				<ribbon:RibbonMenu ribbon:KeyTip.KeyTipKeys="F">
+					<ribbon:RibbonMenu.MenuItems>
+						<MenuItem Header="Item 1">
+							<MenuItem Header="SubItem 1"/>
+							<MenuItem Header="SubItem 2"/>
+						</MenuItem>
+						<MenuItem Header="Item 2">
+							<MenuItem Header="SubItem 1"/>
+							<MenuItem Header="SubItem 2"/>
+							<MenuItem Header="SubItem 3"/>
+						</MenuItem>
+					</ribbon:RibbonMenu.MenuItems>
+					<ribbon:RibbonMenu.MenuPlacesItems>
+						<ListBoxItem Content="Place 1"/>
+						<ListBoxItem Content="Place 2"/>
+						<ListBoxItem Content="Place 3"/>
+					</ribbon:RibbonMenu.MenuPlacesItems>
 				</ribbon:RibbonMenu>
 			</ribbon:Ribbon.Menu>
 			<ribbon:RibbonTab Header="Home" ribbon:KeyTip.KeyTipKeys="H">
@@ -213,7 +157,6 @@
 					</ribbon:RibbonGroupBox>
 				</ribbon:RibbonTab.Groups>
 			</ribbon:RibbonTab>
-			<ribbon:RibbonTab Header="Disabled tab" IsEnabled="False"/>
 			<ribbon:RibbonTab Header="Button Controls" ribbon:KeyTip.KeyTipKeys="B">
 				<ribbon:RibbonTab.Groups>
 					<ribbon:RibbonGroupBox Header="RibbonButtons" Command="{Binding OnClickCommand}" ribbon:KeyTip.KeyTipKeys="B">
@@ -275,8 +218,8 @@
 									</Rectangle.OpacityMask>
 								</Rectangle>
 							</ribbon:RibbonSplitButton.LargeIcon>
-							<ribbon:RibbonDropDownItem>Item 1</ribbon:RibbonDropDownItem>
-							<ribbon:RibbonDropDownItem>Item 2</ribbon:RibbonDropDownItem>
+							<ComboBoxItem>Item 1</ComboBoxItem>
+							<ComboBoxItem>Item 2</ComboBoxItem>
 						</ribbon:RibbonSplitButton>
 						<ribbon:RibbonSplitButton Content="Medium" MinSize="Medium" MaxSize="Medium">
 							<ribbon:RibbonSplitButton.Icon>
@@ -284,8 +227,8 @@
 									<Path Data="M 0 0 L 16 0 L 8 8 L 16 16 L 0 16 Z" Fill="{DynamicResource ThemeForegroundBrush}"/>
 								</Grid>
 							</ribbon:RibbonSplitButton.Icon>
-							<ribbon:RibbonDropDownItem>Item 1</ribbon:RibbonDropDownItem>
-							<ribbon:RibbonDropDownItem>Item 2</ribbon:RibbonDropDownItem>
+							<ComboBoxItem>Item 1</ComboBoxItem>
+							<ComboBoxItem>Item 2</ComboBoxItem>
 						</ribbon:RibbonSplitButton>
 						<ribbon:RibbonSplitButton ToolTip.Tip="Small" MinSize="Small" MaxSize="Small">
 							<ribbon:RibbonSplitButton.Icon>
@@ -293,8 +236,8 @@
 									<Path Data="M 0 0 L 8 8 L 16 0 L 16 16 L 0 16 Z" Fill="{DynamicResource ThemeForegroundBrush}"/>
 								</Grid>
 							</ribbon:RibbonSplitButton.Icon>
-							<ribbon:RibbonDropDownItem>Item 1</ribbon:RibbonDropDownItem>
-							<ribbon:RibbonDropDownItem>Item 2</ribbon:RibbonDropDownItem>
+							<ComboBoxItem>Item 1</ComboBoxItem>
+							<ComboBoxItem>Item 2</ComboBoxItem>
 						</ribbon:RibbonSplitButton>
 					</ribbon:RibbonGroupBox>
 					<ribbon:RibbonGroupBox Header="RibbonButtons" Command="{Binding OnClickCommand}" ribbon:KeyTip.KeyTipKeys="B">
@@ -326,276 +269,81 @@
 							</ribbon:RibbonButton.Icon>
 						</ribbon:RibbonButton>
 					</ribbon:RibbonGroupBox>
-					<ribbon:RibbonGroupBox Header="RibbonDropDownButtons" Command="{Binding OnClickCommand}" ribbon:KeyTip.KeyTipKeys="S">
-						<ribbon:RibbonDropDownButton Content="Large" MinSize="Large" MaxSize="Large">
-							<ribbon:RibbonDropDownButton.LargeIcon>
-								<Rectangle Fill="{DynamicResource ThemeForegroundBrush}" Width="32" Height="32">
-									<Rectangle.OpacityMask>
-										<ImageBrush Source="/Assets/RibbonIcons/settings.png"/>
-									</Rectangle.OpacityMask>
-								</Rectangle>
-							</ribbon:RibbonDropDownButton.LargeIcon>
-							<ribbon:RibbonDropDownItem>Item 1</ribbon:RibbonDropDownItem>
-							<ribbon:RibbonDropDownItem>Item 2</ribbon:RibbonDropDownItem>
-						</ribbon:RibbonDropDownButton>
-						<ribbon:RibbonDropDownButton Content="Medium" MinSize="Medium" MaxSize="Medium">
-							<ribbon:RibbonDropDownButton.Icon>
-								<Grid Width="16" Height="16">
-									<Path Data="M 0 0 L 16 0 L 8 8 L 16 16 L 0 16 Z" Fill="{DynamicResource ThemeForegroundBrush}"/>
-								</Grid>
-							</ribbon:RibbonDropDownButton.Icon>
-							<ribbon:RibbonDropDownItem>Item 1</ribbon:RibbonDropDownItem>
-							<ribbon:RibbonDropDownItem>Item 2</ribbon:RibbonDropDownItem>
-						</ribbon:RibbonDropDownButton>
-						<ribbon:RibbonDropDownButton ToolTip.Tip="Small" MinSize="Small" MaxSize="Small">
-							<ribbon:RibbonDropDownButton.Icon>
-								<Grid Width="16" Height="16">
-									<Path Data="M 0 0 L 8 8 L 16 0 L 16 16 L 0 16 Z" Fill="{DynamicResource ThemeForegroundBrush}"/>
-								</Grid>
-							</ribbon:RibbonDropDownButton.Icon>
-							<ribbon:RibbonDropDownItem>Item 1</ribbon:RibbonDropDownItem>
-							<ribbon:RibbonDropDownItem>Item 2</ribbon:RibbonDropDownItem>
-						</ribbon:RibbonDropDownButton>
-					</ribbon:RibbonGroupBox>
-					<ribbon:RibbonGroupBox Header="RibbonButtons" Command="{Binding OnClickCommand}" ribbon:KeyTip.KeyTipKeys="B">
-						<ribbon:RibbonButton Content="One" MinSize="Medium" MaxSize="Medium">
-							<ribbon:RibbonButton.Icon>
-								<Rectangle Fill="{DynamicResource ThemeForegroundBrush}" Width="16" Height="16">
-									<Rectangle.OpacityMask>
-										<ImageBrush Source="/Assets/RibbonIcons/settings.png"/>
-									</Rectangle.OpacityMask>
-								</Rectangle>
-							</ribbon:RibbonButton.Icon>
-						</ribbon:RibbonButton>
-						<ribbon:RibbonButton Content="Two" MinSize="Medium" MaxSize="Medium">
-							<ribbon:RibbonButton.Icon>
-								<Rectangle Fill="{DynamicResource ThemeForegroundBrush}" Width="16" Height="16">
-									<Rectangle.OpacityMask>
-										<ImageBrush Source="/Assets/RibbonIcons/settings.png"/>
-									</Rectangle.OpacityMask>
-								</Rectangle>
-							</ribbon:RibbonButton.Icon>
-						</ribbon:RibbonButton>
-						<ribbon:RibbonButton Content="Three" MinSize="Medium" MaxSize="Medium">
-							<ribbon:RibbonButton.Icon>
-								<Rectangle Fill="{DynamicResource ThemeForegroundBrush}" Width="16" Height="16">
-									<Rectangle.OpacityMask>
-										<ImageBrush Source="/Assets/RibbonIcons/settings.png"/>
-									</Rectangle.OpacityMask>
-								</Rectangle>
-							</ribbon:RibbonButton.Icon>
-						</ribbon:RibbonButton>
-					</ribbon:RibbonGroupBox>
 				</ribbon:RibbonTab.Groups>
 			</ribbon:RibbonTab>
-			<ribbon:RibbonTab Header="Invisible tab" IsVisible="False"/>
 			<ribbon:RibbonTab Header="Galleries" ribbon:KeyTip.KeyTipKeys="G">
 				<ribbon:RibbonTab.Groups>
 					<ribbon:RibbonGroupBox Header="Large gallery" Command="{Binding OnClickCommand}" ribbon:KeyTip.KeyTipKeys="L">
 						<ribbon:Gallery>
-							<ribbon:GalleryItem Content="Item 1">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Red"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 2">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="OrangeRed"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 3">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Orange"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 4">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Yellow"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 5">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="GreenYellow"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 6">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="YellowGreen"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 7">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Green"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 8">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Turquoise"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 9">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Cyan"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 10">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="SkyBlue"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 11">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Blue"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 12">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="BlueViolet"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
+							<ListBoxItem Content="Item 1"/>
+							<ListBoxItem Content="Item 2"/>
+							<ListBoxItem Content="Item 3"/>
+							<ListBoxItem Content="Item 4"/>
+							<ListBoxItem Content="Item 5"/>
+							<ListBoxItem Content="Item 6"/>
+							<ListBoxItem Content="Item 7"/>
+							<ListBoxItem Content="Item 8"/>
+							<ListBoxItem Content="Item 9"/>
+							<ListBoxItem Content="Item 10"/>
+							<ListBoxItem Content="Item 11"/>
+							<ListBoxItem Content="Item 12"/>
+							<ListBoxItem Content="Item 13"/>
+							<ListBoxItem Content="Item 14"/>
+							<ListBoxItem Content="Item 15"/>
 						</ribbon:Gallery>
 					</ribbon:RibbonGroupBox>
 					<ribbon:RibbonGroupBox Header="Medium gallery" ribbon:KeyTip.KeyTipKeys="M">
 						<ribbon:Gallery MaxSize="Medium">
-							<ribbon:GalleryItem Content="Item 1">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Red"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 2">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="OrangeRed"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 3">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Orange"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 4">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Yellow"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 5">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="GreenYellow"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 6">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="YellowGreen"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 7">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Green"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 8">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Turquoise"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 9">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Cyan"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 10">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="SkyBlue"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 11">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Blue"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 12">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="BlueViolet"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
+							<ListBoxItem Content="Item 1"/>
+							<ListBoxItem Content="Item 2"/>
+							<ListBoxItem Content="Item 3"/>
+							<ListBoxItem Content="Item 4"/>
+							<ListBoxItem Content="Item 5"/>
+							<ListBoxItem Content="Item 6"/>
+							<ListBoxItem Content="Item 7"/>
+							<ListBoxItem Content="Item 8"/>
+							<ListBoxItem Content="Item 9"/>
+							<ListBoxItem Content="Item 10"/>
+							<ListBoxItem Content="Item 11"/>
+							<ListBoxItem Content="Item 12"/>
+							<ListBoxItem Content="Item 13"/>
+							<ListBoxItem Content="Item 14"/>
+							<ListBoxItem Content="Item 15"/>
 						</ribbon:Gallery>
 					</ribbon:RibbonGroupBox>
 					<ribbon:RibbonGroupBox Header="Small gallery" ribbon:KeyTip.KeyTipKeys="S">
 						<ribbon:Gallery MaxSize="Small">
-							<ribbon:GalleryItem Content="Item 1">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Red"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 2">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="OrangeRed"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 3">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Orange"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 4">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Yellow"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 5">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="GreenYellow"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 6">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="YellowGreen"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 7">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Green"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 8">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Turquoise"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 9">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Cyan"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 10">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="SkyBlue"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 11">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="Blue"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
-							<ribbon:GalleryItem Content="Item 12">
-								<ribbon:GalleryItem.Icon>
-									<Rectangle Width="16" Height="16" Fill="BlueViolet"/>
-								</ribbon:GalleryItem.Icon>
-							</ribbon:GalleryItem>
+							<ListBoxItem Content="Item 1"/>
+							<ListBoxItem Content="Item 2"/>
+							<ListBoxItem Content="Item 3"/>
+							<ListBoxItem Content="Item 4"/>
+							<ListBoxItem Content="Item 5"/>
+							<ListBoxItem Content="Item 6"/>
+							<ListBoxItem Content="Item 7"/>
+							<ListBoxItem Content="Item 8"/>
+							<ListBoxItem Content="Item 9"/>
+							<ListBoxItem Content="Item 10"/>
+							<ListBoxItem Content="Item 11"/>
+							<ListBoxItem Content="Item 12"/>
+							<ListBoxItem Content="Item 13"/>
+							<ListBoxItem Content="Item 14"/>
+							<ListBoxItem Content="Item 15"/>
 						</ribbon:Gallery>
 					</ribbon:RibbonGroupBox>
 				</ribbon:RibbonTab.Groups>
 			</ribbon:RibbonTab>
-			<ribbon:RibbonTab Header="Invisible tab" IsVisible="False"/>
-			<ribbon:RibbonTab Header="MyTest" ribbon:KeyTip.KeyTipKeys="J">
+			<ribbon:RibbonTab Header="TestDock">
 				<ribbon:RibbonTab.Groups>
-					<ribbon:RibbonGroupBox  Header="MyTest" Command="{Binding OnClickCommand}" ribbon:KeyTip.KeyTipKeys="J1">
-						<RibbonButton  Content="MyTest" > </RibbonButton>
+					<ribbon:RibbonGroupBox Header="TestDock" Command="{Binding OnClickCommand}">
+						<ribbon:RibbonButton Content="TestDockAdd" Command="{Binding OnClickCommand}">
+							
+						</ribbon:RibbonButton>
 					</ribbon:RibbonGroupBox>
-					
 				</ribbon:RibbonTab.Groups>
 			</ribbon:RibbonTab>
+		
 		</ribbon:Ribbon>
-		<ItemsControl  Height="20"   Background="Green"  DockPanel.Dock="Bottom"></ItemsControl>
+		<ItemsControl  Height="20"   Background="#2b579a"  DockPanel.Dock="Bottom"></ItemsControl>
 		<views:MainView/>
 	</DockPanel>
 
