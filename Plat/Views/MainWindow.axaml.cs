@@ -6,7 +6,7 @@ using Avalonia.Markup.Xaml;
 
 namespace PlatForm.Views
 {
-    public class MainWindow : RibbonWindow
+    public class MainWindow : Window
     {
         public MainWindow()
         {
