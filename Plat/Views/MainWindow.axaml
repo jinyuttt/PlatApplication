@@ -1,4 +1,4 @@
-﻿<ribbon:RibbonWindow xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	   xmlns:id="clr-namespace:Dock.Avalonia;assembly=Dock.Avalonia"
         xmlns:vm="clr-namespace:PlatForm.ViewModels;assembly=PlatForm"
@@ -9,7 +9,6 @@
 	    xmlns:views="clr-namespace:PlatForm.Views;assembly=PlatForm"
 		xmlns:ribbon="clr-namespace:Avalonia.Controls.Ribbon;assembly=Avalonia.Controls.Ribbon"
         Icon="/Assets/avalonia-logo.ico"
-		 HasSystemDecorations="false" BorderBrush="#2b579a" TitleBarBackground="#2b579a" TitleBarForeground="#ffffff"
 		id:DockProperties.IsDragEnabled="True" id:DockProperties.IsDropEnabled="True"
         Title="PlatForm">
 	
@@ -347,4 +346,4 @@
 		<views:MainView/>
 	</DockPanel>
 
-</ribbon:RibbonWindow>
+</Window>
