@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatForm", "Plat\PlatForm.csproj", "{CF29E3BA-2C92-4D4E-B3F8-AD48B9686319}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad", "Notepad\Notepad.csproj", "{98D36333-1D12-47F3-85CC-11A4D9B9D343}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avalonia.Ribbon", "Avalonia.Ribbon\Avalonia.Ribbon.csproj", "{EB6A7BDA-DA1E-4758-928C-AE7076FF82EF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{CF29E3BA-2C92-4D4E-B3F8-AD48B9686319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF29E3BA-2C92-4D4E-B3F8-AD48B9686319}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF29E3BA-2C92-4D4E-B3F8-AD48B9686319}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98D36333-1D12-47F3-85CC-11A4D9B9D343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98D36333-1D12-47F3-85CC-11A4D9B9D343}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98D36333-1D12-47F3-85CC-11A4D9B9D343}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98D36333-1D12-47F3-85CC-11A4D9B9D343}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB6A7BDA-DA1E-4758-928C-AE7076FF82EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB6A7BDA-DA1E-4758-928C-AE7076FF82EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB6A7BDA-DA1E-4758-928C-AE7076FF82EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB6A7BDA-DA1E-4758-928C-AE7076FF82EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

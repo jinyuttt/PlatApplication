@@ -9,7 +9,15 @@
     <Application.Styles>
         <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
         <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
-		<StyleInclude Source="avares://Dock.Avalonia.Themes.Default/DefaultTheme.xaml"/>
-		<StyleInclude Source="avares://Avalonia.Controls.Ribbon/Styles/RibbonStyles.xaml"/>
+		<FluentTheme Mode="Light"/>
+		<StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/BaseLight.xaml" />
+		<StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/Base.xaml" />
+		<StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentBaseLight.xaml" />
+		<StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentControlResourcesLight.xaml" />
+		<StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/FluentControls.xaml" />
+		<StyleInclude Source="avares://AvaloniaUI.Ribbon/Styles/Default/AvaloniaRibbon.xaml" />
+		<StyleInclude Source="avares://AvaloniaUI.Ribbon/Styles/Fluent/AvaloniaRibbon.xaml" />
+		
+		<StyleInclude Source="avares://Dock.Avalonia.Themes.Default/DefaultTheme.axaml"/>
     </Application.Styles>
 </Application>
